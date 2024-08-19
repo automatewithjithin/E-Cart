@@ -50,6 +50,7 @@ public class CartRepo {
         for (Product product:productsList){
             if(product.getProductId()==id){
                 productsList.remove(product);
+                break;
             }
         }
     }

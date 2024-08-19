@@ -57,7 +57,7 @@ public class CartService {
 
     public String deleteProduct(int id) {
         repo.deleteProduct(id);
-        return "Product deleted SUccessfully";
+        return "Product deleted Successfully";
     }
 }
 
