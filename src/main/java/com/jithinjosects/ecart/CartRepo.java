@@ -32,4 +32,16 @@ public class CartRepo {
     public void addNewProduct(Product product) {
         productsList.add(product);
     }
+
+    public void updateProduct(Product product) {
+        for(Product p : productsList){
+            if(p.getProductId()==product.getProductId()){
+                p.setProductName(product.getProductName());
+                p.setPrice(product.getPrice());
+                p.setCategory(product.getCategory());
+                p.setSpec(product.getSpec());
+
+            }
+        }
+    }
 }

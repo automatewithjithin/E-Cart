@@ -29,4 +29,9 @@ public class CartController {
     public ResponseEntity<String>addProduct(@RequestBody Product product){
         return service.addNewProduct(product);
     }
+    @PutMapping("/update")
+    public String updateProduct(@RequestBody Product product){
+        return service.updateProduct(product);
+
+    }
 }
