@@ -1,10 +1,8 @@
 package com.jithinjosects.ecart;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,16 +13,20 @@ public class CartController {
     CartService service;
 
     @GetMapping({"/", "home"})
-    public List<Product> HomePage() {
+    public ResponseEntity<List<Product>> HomePage() {
         return service.getALlProducts();
 
     }
     @GetMapping("product/{id}")
-    public Product getProductById(@PathVariable("id") int id){
+    public ResponseEntity<Product> getProductById(@PathVariable("id") int id){
         return service.getProductById(id);
     }
     @GetMapping("/category")
-    public List<Product>getProductsByCategory(@RequestParam("name") String category){
+    public ResponseEntity<List<Product>>getProductsByCategory(@RequestParam("name") String category){
         return service.getProductsByCategory(category);
+    }
+    @PostMapping("/add")
+    public ResponseEntity<String>addProduct(@RequestBody Product product){
+        return service.addNewProduct(product);
     }
 }
