@@ -44,4 +44,13 @@ public class CartRepo {
             }
         }
     }
+
+    public void deleteProduct(int id) {
+
+        for (Product product:productsList){
+            if(product.getProductId()==id){
+                productsList.remove(product);
+            }
+        }
+    }
 }

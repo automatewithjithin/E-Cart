@@ -49,5 +49,15 @@ public class CartService {
         return new ResponseEntity<>("Product added successfully",HttpStatus.CREATED);
 
     }
+
+    public String updateProduct(Product product) {
+        repo.updateProduct(product);
+        return "Updated Successfully";
+    }
+
+    public String deleteProduct(int id) {
+        repo.deleteProduct(id);
+        return "Product deleted SUccessfully";
+    }
 }
 
