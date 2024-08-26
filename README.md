@@ -1,5 +1,5 @@
 # E-Cart
-Repository for API development and Testing with E-Cart as example
+Repository for API development and Testing with E-Cart as example.
 This project is made of Java SpringBoot Web Application.
 API Documentation
 ----------------------
