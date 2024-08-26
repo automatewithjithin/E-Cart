@@ -47,5 +47,5 @@ Controller consists of 5 action methods
             "White"
         ]
     }
-Run the project in the editor and in Postman, Click on send and observe the results.
+6. Run the project in the editor and in Postman, Click on send and observe the results.
   
